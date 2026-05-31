@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -417,6 +417,24 @@ function checkPassword(){
 
   }
 }
+
+</script>
+
+<!-- BACKGROUND MUSIC -->
+
+<audio id="music" loop>
+
+  <source src="Inaam.mp3" type="audio/mpeg">
+
+</audio>
+
+<script>
+
+document.body.addEventListener('click', function () {
+
+  document.getElementById('music').play();
+
+}, { once: true });
 
 </script>
 
