@@ -5,17 +5,18 @@
   <title>Happy 18th Birthday Avishii Ji</title>
 
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
-      color: white;
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+    body{
+  overflow-y:auto;
+  overflow-x:hidden;
+  background:linear-gradient(135deg,#050505,#111827,#1e1b4b);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  color:white;
+  padding:40px 20px;
+}
 
     .container {
       max-width: 800px;
