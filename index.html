@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +25,17 @@ body{
   position:relative;
   color:white;
   padding:40px 20px;
+}
+
+/* FIREWORKS BACKGROUND */
+
+#fireworks-container{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
 }
 
 /* Floating Hearts */
@@ -257,11 +267,23 @@ p{
 
 <body>
 
+<!-- FIREWORKS CONTAINER -->
+
+<div id="fireworks-container"></div>
+
 <!-- AUTOPLAY BACKGROUND MUSIC -->
 
 <audio autoplay loop>
 
   <source src="Inaam.mp3.mpeg" type="audio/mpeg">
+
+</audio>
+
+<!-- FIREWORKS SOUND -->
+
+<audio autoplay loop>
+
+  <source src="https://www.soundjay.com/explosion/fireworks-01.mp3" type="audio/mpeg">
 
 </audio>
 
@@ -403,6 +425,58 @@ for(let i=0;i<40;i++){
   </div>
 
 </div>
+
+<!-- FIREWORKS SCRIPT -->
+
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+
+<script>
+
+const container = document.getElementById('fireworks-container');
+
+const fireworks = new Fireworks.default(container, {
+
+  rocketsPoint: {
+    min: 50,
+    max: 50
+  },
+
+  hue: {
+    min: 0,
+    max: 360
+  },
+
+  delay: {
+    min: 15,
+    max: 30
+  },
+
+  speed: 2,
+
+  acceleration: 1.05,
+
+  friction: 0.95,
+
+  gravity: 1.5,
+
+  particles: 120,
+
+  trace: 3,
+
+  explosion: 5,
+
+  autoresize: true,
+
+  brightness: {
+    min: 50,
+    max: 80
+  }
+
+});
+
+fireworks.start();
+
+</script>
 
 <!-- Password Script -->
 
