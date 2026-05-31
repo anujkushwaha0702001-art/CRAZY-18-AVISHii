@@ -261,7 +261,6 @@
     <p>
 
       Hey,<br><br>
-```html id="2i3rzf"
 <img src="AVI.PNG" alt="Birthday Image" class="photo">
 ```
 
