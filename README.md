@@ -260,9 +260,8 @@
 
     <p>
 <img src="AVI.PNG" alt="Birthday Image" class="photo">
-```
-      Hey,<br><br>
 
+      Hey,<br><br>
       Ye tumhara <span class="highlight">18th birthday</span> hai,
       isliye kuch special karna chahta tha... ✨<br><br>
 
