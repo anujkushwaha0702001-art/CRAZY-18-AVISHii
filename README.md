@@ -189,7 +189,15 @@
         padding:25px;
       }
     }
-
+```css id="3m4w1a"
+.photo{
+  width:250px;
+  border-radius:20px;
+  margin-top:25px;
+  box-shadow:0 0 20px rgba(255,255,255,0.2);
+}
+```
+    
   </style>
 </head>
 
@@ -253,6 +261,9 @@
     <p>
 
       Hey,<br><br>
+```html id="2i3rzf"
+<img src="AVI.PNG" alt="Birthday Image" class="photo">
+```
 
       Ye tumhara <span class="highlight">18th birthday</span> hai,
       isliye kuch special karna chahta tha... ✨<br><br>
