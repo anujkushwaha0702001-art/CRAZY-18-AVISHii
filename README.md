@@ -1,80 +1,3 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy 18th Birthday Avishii Ji</title>
-
-  <style>
-    body{
-  overflow-y:auto;
-  overflow-x:hidden;
-  background:linear-gradient(135deg,#050505,#111827,#1e1b4b);
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  position:relative;
-  color:white;
-  padding:40px 20px;
-}
-
-    .container {
-      width:90%;
-  max-width:850px;
-  padding:40px;
-  text-align:center;
-  z-index:10;
-
-  margin:40px 0;
-}
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #ffd369;
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.9;
-      color: #f1f1f1;
-    }
-
-    .highlight {
-      color: #ff8fab;
-      font-weight: bold;
-    }
-
-    .footer {
-      margin-top: 30px;
-      font-size: 1rem;
-      opacity: 0.7;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-    <h1>🎂 Happy 18th Birthday Avishii Ji 🎂</h1>
-
-    <p>
-      Hey,<br><br>
-
-      Ye tumhara <span class="highlight">18th birthday</span> hai,
-      isliye kuch special karna chahta tha... ✨<br><br>
-
-      Tumhe wo sab batana tha jo shayad tumhari
-      <span class="highlight">curiosity</span> badhata hai...
-      aur wo bhi jo meri curiosity badhate hain. 🌙<br><br>
-
-      Isliye ye website bana raha hoon...<br><br>
-
-      Hopefully iss mysterious way mein jo reveal karna chahta hoon,
-      usme tumhe mazaa aaye. 🖤
-    </p>
-
-    <div class="footer">
 
 <html lang="en">
 <head>
@@ -83,6 +6,7 @@
   <title>Happy 18th Birthday Avishii Ji</title>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -91,24 +15,24 @@
     }
 
     body{
-      overflow:hidden;
       background:linear-gradient(135deg,#050505,#111827,#1e1b4b);
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
+      min-height:100vh;
+      overflow-y:auto;
+      overflow-x:hidden;
       position:relative;
       color:white;
+      padding:40px 20px;
     }
 
     /* Floating Hearts */
 
     .heart{
-      position:absolute;
+      position:fixed;
       bottom:-20px;
       color:#ff4d6d;
       animation:float linear infinite;
       opacity:0.7;
+      z-index:1;
     }
 
     @keyframes float{
@@ -116,9 +40,11 @@
         transform:translateY(0) scale(1);
         opacity:0;
       }
+
       20%{
         opacity:1;
       }
+
       100%{
         transform:translateY(-120vh) scale(1.8);
         opacity:0;
@@ -130,13 +56,20 @@
     .container{
       width:90%;
       max-width:850px;
+
+      margin:40px auto;
+
       padding:40px;
       text-align:center;
+
       background:rgba(255,255,255,0.05);
       border:1px solid rgba(255,255,255,0.1);
       border-radius:25px;
+
       backdrop-filter:blur(12px);
       box-shadow:0 0 40px rgba(255,255,255,0.08);
+
+      position:relative;
       z-index:10;
     }
 
@@ -196,9 +129,17 @@
       border-radius:4px;
     }
 
-    .candle:nth-child(1){ left:25px; }
-    .candle:nth-child(2){ left:64px; }
-    .candle:nth-child(3){ left:103px; }
+    .candle:nth-child(2){
+      left:25px;
+    }
+
+    .candle:nth-child(3){
+      left:64px;
+    }
+
+    .candle:nth-child(4){
+      left:103px;
+    }
 
     /* Flames */
 
@@ -219,6 +160,7 @@
         transform:translateX(-1px) scale(1);
         opacity:0.8;
       }
+
       to{
         transform:translateX(1px) scale(1.2);
         opacity:1;
@@ -226,9 +168,27 @@
     }
 
     .footer{
-      margin-top:25px;
-      opacity:0.7;
+      margin-top:30px;
       font-size:1rem;
+      opacity:0.7;
+    }
+
+    /* Mobile */
+
+    @media(max-width:600px){
+
+      h1{
+        font-size:2rem;
+      }
+
+      p{
+        font-size:1rem;
+        line-height:1.8;
+      }
+
+      .container{
+        padding:25px;
+      }
     }
 
   </style>
@@ -236,30 +196,43 @@
 
 <body>
 
-  <!-- Hearts -->
+  <!-- Floating Hearts -->
+
   <script>
+
     for(let i=0;i<40;i++){
+
       let heart=document.createElement("div");
+
       heart.classList.add("heart");
+
       heart.innerHTML="❤";
 
       heart.style.left=Math.random()*100+"vw";
+
       heart.style.fontSize=(Math.random()*20+10)+"px";
+
       heart.style.animationDuration=(Math.random()*5+5)+"s";
+
       heart.style.animationDelay=Math.random()*5+"s";
 
       document.body.appendChild(heart);
     }
+
   </script>
 
   <!-- Main Content -->
+
   <div class="container">
 
     <h1>🎂 Happy 18th Birthday Avishii Ji 🎂</h1>
 
     <!-- Cake -->
+
     <div class="cake">
+
       <div class="layer">
+
         <div class="icing"></div>
 
         <div class="candle">
@@ -275,9 +248,11 @@
         </div>
 
       </div>
+
     </div>
 
     <p>
+
       Hey,<br><br>
 
       Ye tumhara <span class="highlight">18th birthday</span> hai,
@@ -291,6 +266,7 @@
 
       Hopefully iss mysterious way mein jo reveal karna chahta hoon,
       usme tumhe mazaa aaye. 🖤
+
     </p>
 
     <div class="footer">
@@ -301,9 +277,4 @@
 
 </body>
 </html>
-      Made with curiosity, mystery & effort ✨
-    </div>
-  </div>
-
-</body>
-</html>
+```
