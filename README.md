@@ -1,60 +1,24 @@
-
+```html
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy 18th Birthday Avishii Ji</title>
 
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
-```html id="u5r4gh"
-<div class="password-box">
+<title>Happy 18th Birthday Avishii Ji</title>
 
-  <h2>🔐 Enter Password</h2>
+<style>
 
-  <input 
-    type="password" 
-    id="password"
-    placeholder="Enter Password"
-  >
-
-  <button onclick="checkPassword()">
-    Unlock
-  </button>
-
-</div>
-
-<script>
-
-function checkPassword(){
-
-  let password =
-  document.getElementById("password").value;
-
-  if(password === "avishii18"){
-
-    window.location.href = "secret.html";
-
-  }
-
-  else{
-
-    alert("Wrong Password 👀");
-
-  }
-
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
-</script>
-```
-
-     body{
+body{
   background:linear-gradient(135deg,#050505,#111827,#1e1b4b);
   min-height:100vh;
   overflow-y:auto;
@@ -63,202 +27,358 @@ function checkPassword(){
   color:white;
   padding:40px 20px;
 }
-    /* Floating Hearts */
 
-    .heart{
-      position:fixed;
-      bottom:-20px;
-      color:#ff4d6d;
-      animation:float linear infinite;
-      opacity:0.7;
-      z-index:1;
-    }
+/* Floating Hearts */
 
-    @keyframes float{
-      0%{
-        transform:translateY(0) scale(1);
-        opacity:0;
-      }
+.heart{
+  position:fixed;
+  bottom:-20px;
+  color:#ff4d6d;
+  animation:float linear infinite;
+  opacity:0.7;
+  z-index:1;
+}
 
-      20%{
-        opacity:1;
-      }
+@keyframes float{
 
-      100%{
-        transform:translateY(-120vh) scale(1.8);
-        opacity:0;
-      }
-    }
+  0%{
+    transform:translateY(0) scale(1);
+    opacity:0;
+  }
 
-    /* Main Card */
+  20%{
+    opacity:1;
+  }
 
-    .container{
-      width:90%;
-      max-width:850px;
+  100%{
+    transform:translateY(-120vh) scale(1.8);
+    opacity:0;
+  }
+}
 
-      margin:40px auto;
+/* Main Card */
 
-      padding:40px;
-      text-align:center;
+.container{
 
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.1);
-      border-radius:25px;
+  width:90%;
+  max-width:850px;
 
-      backdrop-filter:blur(12px);
-      box-shadow:0 0 40px rgba(255,255,255,0.08);
+  margin:40px auto;
 
-      position:relative;
-      z-index:10;
-    }
+  padding:40px;
+  text-align:center;
 
-    h1{
-      font-size:3rem;
-      color:#ffd166;
-      margin-bottom:25px;
-    }
+  background:rgba(255,255,255,0.05);
 
-    p{
-      font-size:1.2rem;
-      line-height:2;
-      color:#f5f5f5;
-    }
+  border:1px solid rgba(255,255,255,0.1);
 
-    .highlight{
-      color:#ff8fab;
-      font-weight:bold;
-    }
+  border-radius:25px;
 
-    /* Cake */
+  backdrop-filter:blur(12px);
 
-    .cake{
-      margin:30px auto;
-      position:relative;
-      width:140px;
-      height:120px;
-    }
+  box-shadow:0 0 40px rgba(255,255,255,0.08);
 
-    .layer{
-      position:absolute;
-      width:140px;
-      height:70px;
-      background:#ff85a2;
-      bottom:0;
-      border-radius:15px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.3);
-    }
+  position:relative;
+  z-index:10;
+}
 
-    .icing{
-      position:absolute;
-      width:140px;
-      height:20px;
-      background:#fff;
-      top:0;
-      border-radius:15px;
-    }
+h1{
+  font-size:3rem;
+  color:#ffd166;
+  margin-bottom:25px;
+}
 
-    /* Candles */
+p{
+  font-size:1.2rem;
+  line-height:2;
+  color:#f5f5f5;
+}
 
-    .candle{
-      position:absolute;
-      width:12px;
-      height:35px;
-      background:#ffffff;
-      top:-35px;
-      border-radius:4px;
-    }
+.highlight{
+  color:#ff8fab;
+  font-weight:bold;
+}
 
-    .candle:nth-child(2){
-      left:25px;
-    }
+/* Cake */
 
-    .candle:nth-child(3){
-      left:64px;
-    }
+.cake{
+  margin:30px auto;
+  position:relative;
+  width:140px;
+  height:120px;
+}
 
-    .candle:nth-child(4){
-      left:103px;
-    }
+.layer{
+  position:absolute;
+  width:140px;
+  height:70px;
+  background:#ff85a2;
+  bottom:0;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
 
-    /* Flames */
+.icing{
+  position:absolute;
+  width:140px;
+  height:20px;
+  background:#fff;
+  top:0;
+  border-radius:15px;
+}
 
-    .flame{
-      position:absolute;
-      width:14px;
-      height:14px;
-      background:gold;
-      border-radius:50%;
-      top:-12px;
-      left:-1px;
-      animation:flicker 0.2s infinite alternate;
-      box-shadow:0 0 15px orange;
-    }
+/* Candles */
 
-    @keyframes flicker{
-      from{
-        transform:translateX(-1px) scale(1);
-        opacity:0.8;
-      }
+.candle{
+  position:absolute;
+  width:12px;
+  height:35px;
+  background:#ffffff;
+  top:-35px;
+  border-radius:4px;
+}
 
-      to{
-        transform:translateX(1px) scale(1.2);
-        opacity:1;
-      }
-    }
+.candle:nth-child(2){
+  left:25px;
+}
 
-    .footer{
-      margin-top:30px;
-      font-size:1rem;
-      opacity:0.7;
-    }
+.candle:nth-child(3){
+  left:64px;
+}
 
-    /* Mobile */
+.candle:nth-child(4){
+  left:103px;
+}
 
-    @media(max-width:600px){
+/* Flames */
 
-      h1{
-        font-size:2rem;
-      }
+.flame{
+  position:absolute;
+  width:14px;
+  height:14px;
+  background:gold;
+  border-radius:50%;
+  top:-12px;
+  left:-1px;
+  animation:flicker 0.2s infinite alternate;
+  box-shadow:0 0 15px orange;
+}
 
-      p{
-        font-size:1rem;
-        line-height:1.8;
-      }
+@keyframes flicker{
 
-      .container{
-        padding:25px;
-      }
-    }
-```css id="3m4w1a"
+  from{
+    transform:translateX(-1px) scale(1);
+    opacity:0.8;
+  }
+
+  to{
+    transform:translateX(1px) scale(1.2);
+    opacity:1;
+  }
+}
+
+/* Image */
+
 .photo{
   width:250px;
   border-radius:20px;
   margin-top:25px;
+  margin-bottom:25px;
   box-shadow:0 0 20px rgba(255,255,255,0.2);
 }
-```
-```html id="q9m4la"
-<!-- PASSWORD BOX -->
 
-<div class="password-box">
+/* Password Box */
 
-  <h2>🔐 Enter The Secret Password</h2>
+.password-box{
 
-  <input 
-    type="password" 
-    id="password"
-    placeholder="Guess the password..."
-  >
+  margin-top:40px;
+  text-align:center;
+}
 
-  <br><br>
+.password-box input{
 
-  <button onclick="checkPassword()">
-    Unlock Mystery ✨
-  </button>
+  padding:12px;
+  border:none;
+  border-radius:10px;
+
+  width:250px;
+
+  outline:none;
+
+  text-align:center;
+}
+
+.password-box button{
+
+  padding:12px 20px;
+
+  border:none;
+  border-radius:10px;
+
+  background:#ff4d6d;
+  color:white;
+
+  cursor:pointer;
+
+  margin-top:10px;
+}
+
+.footer{
+  margin-top:30px;
+  font-size:1rem;
+  opacity:0.7;
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+  h1{
+    font-size:2rem;
+  }
+
+  p{
+    font-size:1rem;
+    line-height:1.8;
+  }
+
+  .container{
+    padding:25px;
+  }
+
+  .photo{
+    width:200px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+
+<script>
+
+for(let i=0;i<40;i++){
+
+  let heart=document.createElement("div");
+
+  heart.classList.add("heart");
+
+  heart.innerHTML="❤";
+
+  heart.style.left=Math.random()*100+"vw";
+
+  heart.style.fontSize=(Math.random()*20+10)+"px";
+
+  heart.style.animationDuration=(Math.random()*5+5)+"s";
+
+  heart.style.animationDelay=Math.random()*5+"s";
+
+  document.body.appendChild(heart);
+}
+
+</script>
+
+<!-- Main Content -->
+
+<div class="container">
+
+  <h1>🎂 Happy 18th Birthday Avishii Ji 🎂</h1>
+
+  <!-- Cake -->
+
+  <div class="cake">
+
+    <div class="layer">
+
+      <div class="icing"></div>
+
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Image -->
+
+  <img src="AVI.PNG" alt="Birthday Image" class="photo">
+
+  <!-- Text -->
+
+  <p>
+
+    Hey,<br><br>
+
+    Ye tumhara <span class="highlight">18th birthday</span> hai,
+    isliye kuch special karna chahta tha... ✨<br><br>
+
+    Tumhe wo sab batana tha jo shayad tumhari
+    <span class="highlight">curiosity</span> badhata hai...
+    aur wo bhi jo meri curiosity badhate hain. 🌙<br><br>
+
+    Isliye ye website bana raha hoon...<br><br>
+
+    Hopefully iss mysterious way mein jo reveal karna chahta hoon,
+    usme tumhe mazaa aaye. 🖤<br><br>
+
+    By the way... 👀<br><br>
+
+    Ye mysterious thing actually un letters ke baare mein hai
+    jo mere computer aur phone mein secretly hidden hain... 🌙<br><br>
+
+    Isliye unhe padhne ke liye...
+    tumhe ek <span class="highlight">password</span> guess karna padega. 🔐✨<br><br>
+
+    Aur haan...
+    isme main tumhari koi bhi help nahi karne waala 😭🖤<br><br>
+
+    Aur sirf letters hi nahi...
+    isme farewell waale gifts ki pics bhi hidden hain. 🎁📸✨
+
+  </p>
+
+  <!-- Password Box -->
+
+  <div class="password-box">
+
+    <h2>🔐 Enter The Secret Password</h2>
+
+    <br>
+
+    <input
+      type="password"
+      id="password"
+      placeholder="Guess the password..."
+    >
+
+    <br><br>
+
+    <button onclick="checkPassword()">
+      Unlock Mystery ✨
+    </button>
+
+  </div>
+
+  <div class="footer">
+    Made with curiosity, mystery & effort ✨
+  </div>
 
 </div>
 
-<!-- JAVASCRIPT -->
+<!-- Password Script -->
 
 <script>
 
@@ -278,111 +398,11 @@ function checkPassword(){
     alert("Wrong Password 👀");
 
   }
-
 }
 
 </script>
-```
-    
-  </style>
-</head>
-
-<body>
-
-  <!-- Floating Hearts -->
-
-  <script>
-
-    for(let i=0;i<40;i++){
-
-      let heart=document.createElement("div");
-
-      heart.classList.add("heart");
-
-      heart.innerHTML="❤";
-
-      heart.style.left=Math.random()*100+"vw";
-
-      heart.style.fontSize=(Math.random()*20+10)+"px";
-
-      heart.style.animationDuration=(Math.random()*5+5)+"s";
-
-      heart.style.animationDelay=Math.random()*5+"s";
-
-      document.body.appendChild(heart);
-    }
-
-  </script>
-
-  <!-- Main Content -->
-
-  <div class="container">
-
-    <h1>🎂 Happy 18th Birthday Avishii Ji 🎂</h1>
-
-    <!-- Cake -->
-
-    <div class="cake">
-
-      <div class="layer">
-
-        <div class="icing"></div>
-
-        <div class="candle">
-          <div class="flame"></div>
-        </div>
-
-        <div class="candle">
-          <div class="flame"></div>
-        </div>
-
-        <div class="candle">
-          <div class="flame"></div>
-        </div>
-
-      </div>
-
-    </div>
-
-    <p>
-<img src="AVI.PNG" alt="Birthday Image" class="photo">
-
-      Hey,<br><br>
-      Ye tumhara <span class="highlight">18th birthday</span> hai,
-      isliye kuch special karna chahta tha... ✨<br><br>
-
-      Tumhe wo sab batana tha jo shayad tumhari
-      <span class="highlight">curiosity</span> badhata hai...
-      aur wo bhi jo meri curiosity badhate hain. 🌙<br><br>
-
-      Isliye ye website bana raha hoon...<br><br>
-
-      Hopefully iss mysterious way mein jo reveal karna chahta hoon,
-      usme tumhe mazaa aaye. 🖤
-
-    </p>
-
-    <div class="footer">
-      Made with curiosity, mystery & effort ✨
-    </div>
-
-  </div>
 
 </body>
+
 </html>
-
-  By the way... 👀<br><br>
-
-  Ye mysterious thing actually un letters ke baare mein hai
-  jo mere computer aur phone mein secretly hidden hain... 🌙<br><br>
-
-  Isliye unhe padhne ke liye...
-  tumhe ek <span class="highlight">password</span> guess karna padega. 🔐✨<br><br>
-
-  Aur haan...
-  isme main tumhari koi bhi help nahi karne waala 😭🖤<br><br>
-
-  Aur sirf letters hi nahi...
-  isme farewell waale gifts ki pics bhi hidden hain. 🎁📸✨
-
-
+```
