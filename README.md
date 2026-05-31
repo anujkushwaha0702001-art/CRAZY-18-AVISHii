@@ -13,8 +13,48 @@
       box-sizing:border-box;
       font-family:'Poppins',sans-serif;
     }
+```html id="u5r4gh"
+<div class="password-box">
 
-   body{
+  <h2>🔐 Enter Password</h2>
+
+  <input 
+    type="password" 
+    id="password"
+    placeholder="Enter Password"
+  >
+
+  <button onclick="checkPassword()">
+    Unlock
+  </button>
+
+</div>
+
+<script>
+
+function checkPassword(){
+
+  let password =
+  document.getElementById("password").value;
+
+  if(password === "avishii18"){
+
+    window.location.href = "secret.html";
+
+  }
+
+  else{
+
+    alert("Wrong Password 👀");
+
+  }
+
+}
+
+</script>
+```
+
+     body{
   background:linear-gradient(135deg,#050505,#111827,#1e1b4b);
   min-height:100vh;
   overflow-y:auto;
@@ -196,6 +236,52 @@
   margin-top:25px;
   box-shadow:0 0 20px rgba(255,255,255,0.2);
 }
+```
+```html id="q9m4la"
+<!-- PASSWORD BOX -->
+
+<div class="password-box">
+
+  <h2>🔐 Enter The Secret Password</h2>
+
+  <input 
+    type="password" 
+    id="password"
+    placeholder="Guess the password..."
+  >
+
+  <br><br>
+
+  <button onclick="checkPassword()">
+    Unlock Mystery ✨
+  </button>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function checkPassword(){
+
+  let password =
+  document.getElementById("password").value;
+
+  if(password === "i hate you"){
+
+    window.location.href = "secret.html";
+
+  }
+
+  else{
+
+    alert("Wrong Password 👀");
+
+  }
+
+}
+
+</script>
 ```
     
   </style>
