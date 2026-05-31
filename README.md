@@ -14,16 +14,15 @@
       font-family:'Poppins',sans-serif;
     }
 
-    body{
-      background:linear-gradient(135deg,#050505,#111827,#1e1b4b);
-      min-height:100vh;
-      overflow-y:auto;
-      overflow-x:hidden;
-      position:relative;
-      color:white;
-      padding:40px 20px;
-    }
-
+   body{
+  background:linear-gradient(135deg,#050505,#111827,#1e1b4b);
+  min-height:100vh;
+  overflow-y:auto;
+  overflow-x:hidden;
+  position:relative;
+  color:white;
+  padding:40px 20px;
+}
     /* Floating Hearts */
 
     .heart{
