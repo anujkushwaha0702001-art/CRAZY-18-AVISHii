@@ -18,13 +18,32 @@
 }
 
 body{
-  background:linear-gradient(135deg,#050505,#111827,#1e1b4b);
+  background:black;
   min-height:100vh;
   overflow-y:auto;
   overflow-x:hidden;
   position:relative;
   color:white;
   padding:40px 20px;
+}
+
+/* BACKGROUND VIDEO */
+
+#bg-video{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  z-index:-3;
+
+  opacity:0.35;
 }
 
 /* FIREWORKS BACKGROUND */
@@ -35,7 +54,7 @@ body{
   left:0;
   width:100%;
   height:100%;
-  z-index:-1;
+  z-index:-2;
 }
 
 /* Floating Hearts */
@@ -46,7 +65,7 @@ body{
   color:#ff4d6d;
   animation:float linear infinite;
   opacity:0.7;
-  z-index:1;
+  z-index:-1;
 }
 
 @keyframes float{
@@ -78,13 +97,11 @@ body{
   padding:40px;
   text-align:center;
 
-  background:rgba(255,255,255,0.05);
+  background:rgba(20,20,35,0.85);
 
   border:1px solid rgba(255,255,255,0.1);
 
   border-radius:25px;
-
-  background:rgba(20,20,35,0.85);
 
   box-shadow:0 0 40px rgba(255,255,255,0.08);
 
@@ -267,6 +284,14 @@ p{
 
 <body>
 
+<!-- BACKGROUND VIDEO -->
+
+<video autoplay muted loop id="bg-video">
+
+  <source src="bg.mp4" type="video/mp4">
+
+</video>
+
 <!-- FIREWORKS CONTAINER -->
 
 <div id="fireworks-container"></div>
@@ -318,8 +343,6 @@ for(let i=0;i<40;i++){
 
   <h1>🎂 Happy 18th Birthday Avishii Ji 🎂</h1>
 
-  <!-- Cake -->
-
   <div class="cake">
 
     <div class="layer">
@@ -342,45 +365,16 @@ for(let i=0;i<40;i++){
 
   </div>
 
-  <!-- Image -->
-
   <img src="AVI.PNG" alt="Birthday Image" class="photo">
-
-  <!-- Text -->
 
   <p>
 
     Hey,<br><br>
 
     Ye tumhara <span class="highlight">18th birthday</span> hai,
-    isliye kuch special karna chahta tha... ✨<br><br>
-
-    Tumhe wo sab batana tha jo shayad tumhari
-    <span class="highlight">curiosity</span> badhata hai...
-    aur wo bhi jo meri curiosity badhate hain. 🌙<br><br>
-
-    Isliye ye website bana raha hoon...<br><br>
-
-    Hopefully iss mysterious way mein jo reveal karna chahta hoon,
-    usme tumhe mazaa aaye. 🖤<br><br>
-
-    By the way... 👀<br><br>
-
-    Ye mysterious thing actually un letters ke baare mein hai
-    jo mere computer aur phone mein secretly hidden hain... 🌙<br><br>
-
-    Isliye unhe padhne ke liye...
-    tumhe ek <span class="highlight">password</span> guess karna padega. 🔐✨<br><br>
-
-    Aur haan...
-    isme main tumhari koi bhi help nahi karne waala 😭🖤<br><br>
-
-    Aur sirf letters hi nahi...
-    isme farewell waale gifts ki pics bhi hidden hain. 🎁📸✨
+    isliye kuch special karna chahta tha... ✨
 
   </p>
-
-  <!-- Password Box -->
 
   <div class="password-box">
 
@@ -400,28 +394,6 @@ for(let i=0;i<40;i++){
       Unlock Mystery ✨
     </button>
 
-    <!-- HINT -->
-
-    <p style="margin-top:20px; color:#ffb3c6; line-height:1.8;">
-
-      Hint 👀✨<br><br>
-
-      Jbb me naa rahu...
-      aur wo <span class="highlight">3 magical words</span>
-      apna meaning hi badal jaayein... 🌙<br><br>
-
-      Wo naa to kisi ka naam hoga...
-      naa hi koi jagah ka naam...<br><br>
-
-      Shayad wo sirf humaari situation hogi
-      unhi 3 magical words mein... 🖤
-
-    </p>
-
-  </div>
-
-  <div class="footer">
-    Made with curiosity, mystery & effort ✨
   </div>
 
 </div>
