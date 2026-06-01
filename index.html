@@ -361,12 +361,24 @@ p{
 
 <!-- AUTOPLAY BACKGROUND MUSIC -->
 
-<audio autoplay loop>
+<audio id="bgMusic" loop>
 
   <source src="Inaam.mp3" type="audio/mpeg">
 
 </audio>
 
+<script>
+
+window.addEventListener('click', () => {
+
+  const music =
+  document.getElementById("bgMusic");
+
+  music.play();
+
+}, { once:true });
+
+</script>
 <!-- FIREWORKS SOUND -->
 
 <audio autoplay loop>
