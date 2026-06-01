@@ -153,7 +153,7 @@ for(let i=0;i<40;i++){
 
 <br><br>
 
-<video autoplay muted loop playsinline>
+<video autoplay loop playsinline class="edit-video" muted>
 
   <source src="birthdayavi.MOV" type="video/mp4">
 
@@ -200,7 +200,7 @@ for(let i=0;i<40;i++){
 
   <!-- FIRST VIDEO -->
 
-  <video autoplay muted loop playsinline>
+  <video autoplay loop playsinline class="edit-video" muted>
 
     <source src="avishiblue.mp4" type="video/mp4">
 
@@ -208,7 +208,7 @@ for(let i=0;i<40;i++){
 
   <!-- SECOND VIDEO -->
 
-  <video autoplay muted loop playsinline>
+  <video autoplay loop playsinline class="edit-video" muted>
 
     <source src="avishiii.mp4" type="video/mp4">
 
@@ -278,6 +278,33 @@ const fireworks = new Fireworks.default(container, {
 });
 
 fireworks.start();
+
+</script>
+```html id="u7m2qp"
+<script>
+
+const videos =
+document.querySelectorAll(".edit-video");
+
+videos.forEach(video => {
+
+  video.addEventListener("click", () => {
+
+    videos.forEach(v => {
+
+      v.muted = true;
+
+    });
+
+    video.muted = false;
+
+    video.volume = 1;
+
+    video.play();
+
+  });
+
+});
 
 </script>
 
