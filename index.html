@@ -645,8 +645,11 @@ fireworks.start();
 
 function checkPassword(){
 
-  let password =
-  document.getElementById("password").value;
+ 
+let password =
+document.getElementById("password").value;
+
+if(
 
   password === "one sided love"
   ||
@@ -654,15 +657,16 @@ function checkPassword(){
   ||
   password === "avishi loves anuj"
 
-    window.location.href = "secret.html";
+){
 
-  }
+  window.location.href = "secret.html";
 
-  else{
+}
 
-    alert("Wrong Password 👀");
+else{
 
-  }
+  alert("Wrong Password 👀");
+
 }
 
 </script>
