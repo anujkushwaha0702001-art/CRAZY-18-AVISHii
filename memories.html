@@ -1,3 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Memories</title>
+
+<style>
+
+body{
+  background:black;
+  color:white;
+  text-align:center;
+  font-family:Arial;
+  overflow-x:hidden;
+  margin:0;
+  padding:40px 20px;
+}
+
+/* FIREWORKS */
+
+#fireworks-container{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-2;
+}
+
+/* FLOATING HEARTS */
+
+.heart{
+  position:fixed;
+  bottom:-20px;
+  color:#ff4d6d;
+  animation:float linear infinite;
+  opacity:0.7;
+  z-index:-1;
+}
+
+@keyframes float{
+
+  0%{
+    transform:translateY(0) scale(1);
+    opacity:0;
+  }
+
+  20%{
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(-120vh) scale(1.8);
+    opacity:0;
+  }
+}
+
+/* VIDEOS */
+
+video{
+
+  width:320px;
+
+  border-radius:25px;
+
+  box-shadow:0 0 35px rgba(255,255,255,0.25);
+}
+
+/* FLEX */
+
+.video-flex{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:flex-start;
+
+  gap:25px;
+
+  flex-wrap:wrap;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- FIREWORKS -->
+
+<div id="fireworks-container"></div>
+
+<!-- HEARTS -->
+
+<script>
+
+for(let i=0;i<40;i++){
+
+  let heart=document.createElement("div");
+
+  heart.classList.add("heart");
+
+  heart.innerHTML="❤";
+
+  heart.style.left=Math.random()*100+"vw";
+
+  heart.style.fontSize=(Math.random()*20+10)+"px";
+
+  heart.style.animationDuration=(Math.random()*5+5)+"s";
+
+  heart.style.animationDelay=Math.random()*5+"s";
+
+  document.body.appendChild(heart);
+}
+
+</script>
+
 <!-- SOME EDITS SECTION -->
 
 <h1 style="
@@ -11,11 +134,7 @@
 
 <br><br>
 
-<video controls class="photo" style="
-  width:340px;
-  border-radius:25px;
-  box-shadow:0 0 35px rgba(255,255,255,0.25);
-">
+<video autoplay muted loop playsinline>
 
   <source src="birthdayavi.MOV" type="video/mp4">
 
@@ -58,21 +177,11 @@
 
 <br><br>
 
-<div style="
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  gap:25px;
-  flex-wrap:nowrap;
-">
+<div class="video-flex">
 
   <!-- FIRST VIDEO -->
 
-  <video controls style="
-    width:300px;
-    border-radius:25px;
-    box-shadow:0 0 35px rgba(255,255,255,0.25);
-  ">
+<video autoplay muted loop playsinline>
 
     <source src="avishiblue.mp4" type="video/mp4">
 
@@ -80,11 +189,7 @@
 
   <!-- SECOND VIDEO -->
 
-  <video controls style="
-    width:300px;
-    border-radius:25px;
-    box-shadow:0 0 35px rgba(255,255,255,0.25);
-  ">
+<video autoplay muted loop playsinline>
 
     <source src="avishiii.mp4" type="video/mp4">
 
@@ -98,9 +203,66 @@
   color:#ffb3c6;
   font-size:22px;
   line-height:1.9;
+  text-align:center;
 ">
 
   Shayad ye edits tum already dekh chuki ho... 🌙🖤
 
 </p>
+
+<!-- FIREWORKS SCRIPT -->
+
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+
+<script>
+
+const container = document.getElementById('fireworks-container');
+
+const fireworks = new Fireworks.default(container, {
+
+  rocketsPoint: {
+    min: 50,
+    max: 50
+  },
+
+  hue: {
+    min: 0,
+    max: 360
+  },
+
+  delay: {
+    min: 15,
+    max: 30
+  },
+
+  speed: 2,
+
+  acceleration: 1.05,
+
+  friction: 0.95,
+
+  gravity: 1.5,
+
+  particles: 120,
+
+  trace: 3,
+
+  explosion: 5,
+
+  autoresize: true,
+
+  brightness: {
+    min: 50,
+    max: 80
+  }
+
+});
+
+fireworks.start();
+
+</script>
+
+</body>
+
+</html>
 ```
