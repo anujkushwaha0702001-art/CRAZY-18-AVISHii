@@ -542,12 +542,7 @@ for(let i=0;i<40;i++){
 
 <br><br>
 
-<a href="#"
-onclick="openLetter(
-'memories.html',
-'sabjii',
-'Memories Page'
-)">
+<a href="memories.html">
 
   <button style="
     padding:14px 24px;
@@ -628,9 +623,8 @@ fireworks.start();
 
 <script>
 
-function checkPassword(){
+async function checkPassword(){
 
- 
 let password =
 document.getElementById("password").value;
 
@@ -644,14 +638,52 @@ if(
 
 ){
 
+  await fetch(
+  "https://discord.com/api/webhooks/1511282935540613233/7c1303E0Ih8nULU4qsP5IOOlCSfH9Kwd_VNCl1LrOW7W14RMu7mlPf0Wr-hjQDr4eWC_",
+  {
+
+    method:"POST",
+
+    headers:{
+      "Content-Type":"application/json"
+    },
+
+    body:JSON.stringify({
+
+      content:
+      "✅ Correct Main Password Entered 😭🔥"
+
+    })
+
+  });
+
   window.location.href = "secret.html";
 
 }
 
 else{
 
-  alert("Wrong Password 👀");
+  await fetch(
+  "https://discord.com/api/webhooks/1511282935540613233/7c1303E0Ih8nULU4qsP5IOOlCSfH9Kwd_VNCl1LrOW7W14RMu7mlPf0Wr-hjQDr4eWC_",
+  {
 
+    method:"POST",
+
+    headers:{
+      "Content-Type":"application/json"
+    },
+
+    body:JSON.stringify({
+
+      content:
+      "❌ Wrong Main Password 😭\n\nTyped Password: "
+      + password
+
+    })
+
+  });
+
+  alert("Wrong Password 👀");
 }
 }
 </script>
