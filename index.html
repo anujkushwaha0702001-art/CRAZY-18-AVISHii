@@ -669,39 +669,42 @@ letterName
 
   /* WRONG PASSWORD */
 
-  if(
-    enteredPassword !== correctPassword
-  ){
+if(
+  enteredPassword !== correctPassword
+){
 
-   await fetch(
-    "https://discord.com/api/webhooks/1511301361256632440/_oSClKUwV3ddAJkShmdxn7zvBbzECLzefEtn9kHW9CC06BoGjvVkWYm7IKurUplZaFN-",
-    {
+  console.log("Sending Wrong Password Notification 😭");
 
-      method:"POST",
+  await fetch(
+  "https://discord.com/api/webhooks/1511301361256632440/_oSClKUwV3ddAJkShmdxn7zvBbzECLzefEtn9kHW9CC06BoGjvVkWYm7IKurUplZaFN-",
+  {
 
-      headers:{
-        "Content-Type":"application/json"
-      },
+    method:"POST",
 
-      body:JSON.stringify({
+    headers:{
+      "Content-Type":"application/json"
+    },
 
-        content:
-        "❌ Wrong password tried for "
-        + letterName +
-        "\n\nTyped Password: "
-        + enteredPassword
+    body:JSON.stringify({
 
-      })
+      content:
+      "❌ Wrong password tried for "
+      + letterName +
+      "\n\nTyped Password: "
+      + enteredPassword
 
-    });
-    
-alert("Wrong Password 😭");
+    })
 
-await new Promise(resolve =>
-setTimeout(resolve, 1000));
+  });
 
-return;
-  }
+  console.log("Wrong Password Notification Sent 😭🔥");
+
+  alert("Wrong Password 😭");
+
+  return;
+}
+
+
 
   /* CORRECT PASSWORD */
 
