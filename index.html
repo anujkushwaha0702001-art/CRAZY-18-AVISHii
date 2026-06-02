@@ -363,37 +363,9 @@ p{
 
 <audio id="bgMusic" loop preload="auto">
 
-  <source src="Inaam.mp3" type="audio/mpeg">
+  <source src="./Inaam.mp3" type="audio/mpeg">
 
 </audio>
-
-<script>
-
-const music = document.getElementById("bgMusic");
-
-function startMusic() {
-
-  music.play()
-  .then(() => {
-
-    console.log("Music Started");
-
-  })
-  .catch((err) => {
-
-    console.log("Autoplay blocked:", err);
-
-  });
-
-  document.removeEventListener("click", startMusic);
-  document.removeEventListener("touchstart", startMusic);
-
-}
-
-document.addEventListener("click", startMusic);
-document.addEventListener("touchstart", startMusic);
-
-</script>
 
 <!-- Floating Hearts -->
 
@@ -678,7 +650,17 @@ else{
 }
 }
 </script>
+<script>
 
+document.body.addEventListener("click", function () {
+
+  let music = document.getElementById("bgMusic");
+
+  music.play();
+
+}, { once: true });
+
+</script>
 </body>
 
 </html>
