@@ -694,10 +694,13 @@ letterName
       })
 
     });
+    
+alert("Wrong Password 😭");
 
-    alert("Wrong Password 😭");
+await new Promise(resolve =>
+setTimeout(resolve, 1000));
 
-    return;
+return;
   }
 
   /* CORRECT PASSWORD */
@@ -723,7 +726,10 @@ letterName
 
   });
 
-  window.open(fileName,"_blank");
+await new Promise(resolve =>
+setTimeout(resolve, 1000));
+
+window.open(fileName,"_blank");
 
 }
 
