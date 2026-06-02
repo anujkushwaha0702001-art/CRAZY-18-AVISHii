@@ -287,8 +287,10 @@ const fireworks = new Fireworks.default(container, {
 fireworks.start();
 
 </script>
-
 <script>
+
+const bgMusic =
+document.getElementById("bgMusic");
 
 const videos =
 document.querySelectorAll(".edit-video");
@@ -297,11 +299,19 @@ videos.forEach(video => {
 
   video.addEventListener("click", () => {
 
+    // Pause background music
+
+    bgMusic.pause();
+
+    // Sab videos mute
+
     videos.forEach(v => {
 
       v.muted = true;
 
     });
+
+    // Clicked video unmute
 
     video.muted = false;
 
@@ -313,7 +323,25 @@ videos.forEach(video => {
 
 });
 
+// Outside click = BGM resume
+
+document.body.addEventListener("click", (e) => {
+
+  if(!e.target.closest("video")){
+
+    videos.forEach(v => {
+
+      v.muted = true;
+
+    });
+
+    bgMusic.play().catch(() => {});
+  }
+
+});
+
 </script>
+
 <script>
 
 document.body.addEventListener("click", function () {
