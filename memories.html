@@ -115,6 +115,13 @@ video{
 
 <div id="fireworks-container"></div>
 
+<!-- BACKGROUND MUSIC -->
+
+<audio id="bgMusic" loop preload="auto">
+
+  <source src="inaam.mp3" type="audio/mpeg">
+
+</audio>
 <!-- HEARTS -->
 
 <script>
@@ -307,7 +314,17 @@ videos.forEach(video => {
 });
 
 </script>
+<script>
 
+document.body.addEventListener("click", function () {
+
+  let music = document.getElementById("bgMusic");
+
+  music.play();
+
+}, { once: true });
+
+</script>
 </body>
 
 </html>
